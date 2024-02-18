@@ -2,8 +2,8 @@ import {
     createBrowserRouter,
 } from 'react-router-dom';
 
-import Login from '../pages/login';
 import Register from '../pages/Register';
+import Login from '../pages/login';
 
 
 const router = createBrowserRouter([

@@ -26,7 +26,7 @@ export async function login (empresa , password){
 
 export async function register(cnpj , empresa, password , confirmPassword){
     try {
-        const {data} = await api.post('/cadastrousuario' , {
+        const {data} = await api.post('/auth/register' , {
             cnpj,
             empresa,
             password,
@@ -50,3 +50,4 @@ export async function register(cnpj , empresa, password , confirmPassword){
         }
     }
 };
+export{};

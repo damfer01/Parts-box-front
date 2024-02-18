@@ -3,7 +3,7 @@ import * as yup from 'yup'
 const message = 'campo obrigatorio'
 
 const loginSchema = yup.object({
-    username: yup.string().required(message),
+    empresa: yup.string().required(message),
     password: yup.string().required(message),
 });
 

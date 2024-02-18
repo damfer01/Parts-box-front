@@ -11,7 +11,7 @@ import { Actions, Form } from '../../components/Form';
 import { Main } from '../../components/Main/main';
 import { Button } from "../../components/Button";
 import { useNavigate } from 'react-router-dom';
-import { useStore } from '../../store';
+import { useStore } from '../../store/index';
  import { login } from '../../service/authServices';
 
 
@@ -36,7 +36,7 @@ export default function Login() {
         resolver: yupResolver(loginSchema),
        mode: 'onChange', 
        defaultValues:{
-        empresa : "damfer",
+        empresa : "PartsBox",
         password : "123456789",
        }
     });
@@ -54,7 +54,7 @@ export default function Login() {
         if(success){
             user.setUserData(result);
 
-            navigate('/');
+            navigate('/auth');
         } 
         
     };
