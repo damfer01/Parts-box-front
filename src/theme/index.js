@@ -1,6 +1,6 @@
 const theme = {
     colors: {
-        primaryLight: '#3664AD',
+        primaryLight: '#5389A0',
         primary: '#2F5694',
         primaryDark: '#1E2D5F',
 
@@ -59,8 +59,8 @@ const theme = {
               dark: '#8366D8',
             },
             Psychic: {
-              main: '#F95587',
-              dark: '#DD3A6C',
+              main: '#5389A0',
+              dark: '#5389A0',
             },
             Bug: {
               main: '#A6B91A',
