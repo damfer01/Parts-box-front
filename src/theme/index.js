@@ -1,12 +1,12 @@
 const theme = {
     colors: {
         primaryLight: '#5389A0',
-        primary: '#2F5694',
+        primary: '#yarn ',
         primaryDark: '#1E2D5F',
 
         secondaryLight: '#FFEA9B',
-        secondary: '#FFCB05',
-        secondaryDark: '#EEBE05',
+        secondary: '#FFFFFF',
+        secondaryDark: '#FFFFFF',
 
         dangerLight: '#F16C09',
         danger: '#F14F09',
@@ -14,7 +14,7 @@ const theme = {
         defaultLight: '#A3A9B4',
         default: '#6D6D6D',
 
-        white: '#FFFFFF',
+        white: '#E5E3E3',
         black: '#000000',
         
         types: {

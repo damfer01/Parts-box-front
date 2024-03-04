@@ -57,7 +57,7 @@ export const IconButton = styled.button`
   & > svg {
     font-size: 24px;
     color: ${({ theme, $error }) => $error
-      ? theme.colors.danger
+      ? theme.colors.white
       : theme.colors.secondary
     };
   }

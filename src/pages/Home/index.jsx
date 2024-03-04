@@ -1,30 +1,54 @@
 //import { Rows, SquaresFour } from "@phosphor-icons/react";
 //import { SelectionButton } from "../../components/SelectionButton";
-import { GridView, Section, SelectGridView } from "./style";
+import { GridView, Section, SelectGridView, } from "./style";
 import { useEffect, useState } from "react";
+import { Button } from "../../components/Card/ButtonCard";
+import { CardAdicionar  } from "../../components/Card/CardAdicionar/CardAdicionar ";
+import { useNavigate } from 'react-router-dom';
+import { BarraPesquisa } from "../../components/BarraDePesquisa/BarraPesquisa";
+import { CardLocal } from "../../components/Card/ButtonCard/CardLocal/CardLocal";
 
-import { useStore } from '../../store'
+
 
 
 
 export default function Home() {
+  const [showCard, setShowCard] = useState(false)
+ 
 
-    
-     
 
-  
-     
+ 
+
     
       return (
         <Section>
           <SelectGridView>
-       
-            <h2>planilha
+            <BarraPesquisa/>
 
-            </h2>
-        
-          
+            
+
+            
+
+    
+
+            
+           <Button  
+            type="submit"
+            onClick={()=>   setShowCard(true) }
+            >
+                adicionar +
+              </Button>
+
           </SelectGridView>
+              <CardLocal  />
+              <CardLocal  />
+              
+
+         <CardAdicionar showCard={showCard} onClose={() => setShowCard(false)} />
+             
+
+
+            
     </Section>
       );
       

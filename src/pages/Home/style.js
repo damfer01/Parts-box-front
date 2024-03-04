@@ -15,7 +15,7 @@ export const SelectGridView = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center ;
     padding-top: 12px 0px ;
 
 `;
@@ -30,4 +30,7 @@ export const GridView = styled.div `
     flex:1;
     padding: 0px 16px; 
     overflow: auto ; 
+
+
+    
 `;

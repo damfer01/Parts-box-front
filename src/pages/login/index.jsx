@@ -1,5 +1,5 @@
 
-import logo from '../../assets/logo.svg';
+import PartsBox from '../../assets/PartsBox.svg';
 import { Input } from "../../components/Input";
 import {useForm} from 'react-hook-form';
 
@@ -36,8 +36,8 @@ export default function Login() {
         resolver: yupResolver(loginSchema),
        mode: 'onChange', 
        defaultValues:{
-        empresa : "PartsBox",
-        password : "123456789",
+        empresa : "damfer",
+        password : "12345678",
        }
     });
 
@@ -54,14 +54,14 @@ export default function Login() {
         if(success){
             user.setUserData(result);
 
-            navigate('/auth');
+            navigate('/caixa');
         } 
         
     };
     
     return(
         <Main>
-            <Logo src={logo} />
+            <Logo src={PartsBox} />
 
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <Spacing $bottom={20}>

@@ -1,5 +1,5 @@
 
-import logo from '../../assets/logo.svg';
+import PartsBox from '../../assets/PartsBox.svg';
 import { Input } from "../../components/Input";
 import {useForm} from 'react-hook-form';
 
@@ -62,7 +62,7 @@ export default function Register() {
     
     return(
         <Main>
-            <Logo src={logo} />
+            <Logo src={PartsBox} />
 
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <Spacing $bottom={16}>

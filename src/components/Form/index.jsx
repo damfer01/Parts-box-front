@@ -6,7 +6,7 @@ display: flex;
 flex-direction: column;
 align-items : center;
 width: 100%;
-padding: 105px 16px 0px 16px;
+padding: 25px 16px 0px 16px;
 `;
 
 export const Actions = styled.div`
