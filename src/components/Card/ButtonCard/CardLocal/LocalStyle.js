@@ -1,25 +1,17 @@
 import styled from "styled-components";
 
-export const LocalStyle = styled.dialog`
+export const LocalStyle = styled.button`
 
-     background: #5389A0;
-    position: relative;
+     background-color: #5389A0;
     display:  flex;
-    top:180px;
-    left: 10px;
-    align-items: center;
-    justify-content: center ;
-    width: 280px;
-    height: 55px;
-    margin: 3px;
-    gap: 3px;
-    grid-auto-flow:3x;
-    background-color : ${({theme, $color})=> theme.colors[$color]} ;
+    flex-direction: column;
+    padding: 16px;
     border: none;
     border-radius: 10px;
-    font-size: 24px;
+    color: #FFF;
+    font-size: 16px;
     font-weight :600;
-    color: ${({theme}) => theme.colors.white};
+    
     transition: all .2s;
 
     &:disabled{

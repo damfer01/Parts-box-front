@@ -1,13 +1,12 @@
-import { LocalStyle } from "./LocalStyle" 
+import { LocalStyle } from "./LocalStyle";
 
-export function CardLocal(){
-    // ESSE E PRA  MOSTRA OQUE ADICIONOU ATE SALVAR
-    return(
-        <LocalStyle open>
-        <div>
-            
-            
-        </div>
+export function CardLocal({_id,dono, motor, data}) {
+
+    return (
+        <LocalStyle>
+            <span>{dono}</span>
+            <span>{motor}</span>
+            <span>{data}</span>
         </LocalStyle>
-        )
+    )
 }
