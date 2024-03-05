@@ -1679,6 +1679,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@phosphor-icons/react@^2.0.15":
+  version "2.0.15"
+  resolved "https://registry.yarnpkg.com/@phosphor-icons/react/-/react-2.0.15.tgz#4d8e28484d45649f53a6cd75db161cf8b8379e1d"
+  integrity sha512-PQKNcRrfERlC8gJGNz0su0i9xVmeubXSNxucPcbCLDd9u0cwJVTEyYK87muul/svf0UXFdL2Vl6bbeOhT1Mwow==
+
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
@@ -6571,6 +6576,11 @@ lru-cache@^6.0.0:
   version "10.2.0"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.2.0.tgz#0bd445ca57363465900f4d1f9bd8db343a4d95c3"
   integrity sha512-2bIM8x+VAf6JT4bKAljS1qUWgMsqZRPGJS6FSahIMPVvctcNhyVp7AJu7quxOW9jwkryBReKZY5tY5JYv2n/7Q==
+
+lucide-react@^0.344.0:
+  version "0.344.0"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.344.0.tgz#fcbc7cf855e6baedbc14aab6ddca09b7c1afc46d"
+  integrity sha512-6YyBnn91GB45VuVT96bYCOKElbJzUHqp65vX8cDcu55MQL9T969v4dhGClpljamuI/+KMO9P6w9Acq1CVQGvIQ==
 
 lz-string@^1.5.0:
   version "1.5.0"

@@ -4,9 +4,6 @@ import {useForm} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
 import CaixaSchema from '../../../schema/Caixa/CaixaSchema';
 
-
-
-
 import { CardSttyle } from "./style";
 
 import { X } from 'lucide-react';
