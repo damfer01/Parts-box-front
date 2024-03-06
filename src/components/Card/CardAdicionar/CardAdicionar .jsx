@@ -9,9 +9,15 @@ import { CardSttyle } from "./style";
 import { X } from 'lucide-react';
 import { registerCaixa } from '../../../service/authCaixa';
 import { useState } from 'react';
+
+
+
+
 export function CardAdicionar({ showCard, onClose }) {
 
     const [pecas, setPecas] = useState([]);
+
+   
 
     const handleAddPeca = () => {
         setPecas((value) => [...value, value.length])

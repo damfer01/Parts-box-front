@@ -1,7 +1,7 @@
 //import { Rows, SquaresFour } from "@phosphor-icons/react";
 //import { SelectionButton } from "../../components/SelectionButton";
 import { GridView, Section, SelectGridView, } from "./style";
-import { useEffect, useState, } from "react";
+import { useEffect, useState, ChangeEvent } from "react";
 import { Button } from "../../components/Card/ButtonCard";
 import { CardAdicionar } from "../../components/Card/CardAdicionar/CardAdicionar ";
 import { BarraPesquisa } from "../../components/BarraDePesquisa/BarraPesquisa";
@@ -19,11 +19,12 @@ export default function Home() {
   const[caixa, setCaixa]=useState(null);
 
   const [caixas, setCaixas] = useState([]);
-  
+
+  const[search,setSearch]= useState('')
 
   async function loadCaixas() {
     try {
-      const { data: {result} } = await api.get('/caixa');
+      const { data: {result} } = await api.get('/caixa'); // api.delete(`/caixa/${id}`)
       
       setCaixas(result)
     } catch (err) {
@@ -44,12 +45,27 @@ export default function Home() {
   }
 
   useEffect(() => {
-    loadCaixas();
-  }, []);
+    if(caixa === null) {
+      loadCaixas();
+    }
+  }, [caixa]);
 
 
+  const handleDelete = (id) => {
+    setCaixas((caixas) => caixas.filter((caixa) => caixa._id !== id))
 
+    setCaixa(null);
+  }
 
+  function handleSearch(event){
+    const query = event.target.value
+
+    setSearch(query)
+  }
+
+  const filterCaixas =search !== ''
+  ?caixa.filter(caixa=> caixa.content.toLocalLowerCase().includes(search.toLocaleLowerCase()))
+  :caixa
 
 
   return (
@@ -61,7 +77,8 @@ export default function Home() {
         >
           adicionar +
         </Button>
-        <BarraPesquisa />
+        <BarraPesquisa  type="text"  onChange={handleSearch}/>
+
       </SelectGridView>
 
       <span>Cadastrados :</span>
@@ -76,6 +93,8 @@ export default function Home() {
              />
           ))
         }
+
+        
          
 
       </GridView>

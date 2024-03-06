@@ -1,8 +1,10 @@
 import { PesquisaStyle } from "./Pesquisa"
 
 
-export function BarraPesquisa() {
+export function BarraPesquisa(caixa) {
 
+
+       
     return (
         <PesquisaStyle >
             <div >

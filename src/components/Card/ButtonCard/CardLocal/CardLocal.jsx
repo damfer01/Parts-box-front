@@ -1,5 +1,6 @@
 import { LocalStyle } from "./VisualCaixa/LocalStyle"
 
+
 export function CardLocal({onClick,_id,dono, motor, data,pecas}) {
 
     return (
@@ -7,13 +8,9 @@ export function CardLocal({onClick,_id,dono, motor, data,pecas}) {
     
             <span>{dono}</span>
             <span>{motor}</span>
-            <span>{data}</span>
+            <span>{data/*{locale:ptBR , addSuffix:true}*/}</span>
             
-            {
-                pecas.map((peca)=>(
-                    <span>{peca.nome}</span>
-                ) )
-            }
+            
             
 
            

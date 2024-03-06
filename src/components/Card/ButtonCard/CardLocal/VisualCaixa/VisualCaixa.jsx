@@ -1,10 +1,37 @@
-
+import api from "../../../../../config/api";
+import { useEffect, useState, } from "react";
 import { LocalSttyle } from "../../../../../components/Card/ButtonCard/CardLocal/VisualCaixa/style";
 
 import { X } from 'lucide-react';
 
 
-export function VisualCaixa({caixa, onClose }) {
+
+
+export function VisualCaixa({caixa, onClose}) { 
+    
+         async function deleteCaixas() {
+             try {
+               await api.delete(`/caixa/${caixa._id}`);
+               
+
+               onClose();
+             } catch (err) {
+              if (err.response) {
+                const { data } = err.response;
+        
+               return {
+                  success: data.success,
+                   message: data.message,
+             };
+            } else {
+              return {
+              success: false,
+                message: "falha ao se comunicar com o servidor !!",
+             }
+            }
+           }
+          }
+
    
     return caixa !== null ? (
         <LocalSttyle open >
@@ -17,7 +44,7 @@ export function VisualCaixa({caixa, onClose }) {
                 <span>{caixa.motor}</span>
                 <span>{caixa.data}</span>
                  </div>
-                    <span>peças</span>
+                    <span className="pecas">peças</span>
                 {
                     caixa.pecas.map((peca) => (
                         <div>
@@ -29,8 +56,10 @@ export function VisualCaixa({caixa, onClose }) {
                 }
 
 
+              
 
-                <button className="excluir">Excluir</button>
+                <button className="excluir" onClick={deleteCaixas}>Excluir</button>
+               
             
 
         </LocalSttyle>
