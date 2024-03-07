@@ -1,13 +1,14 @@
-//import { Rows, SquaresFour } from "@phosphor-icons/react";
-//import { SelectionButton } from "../../components/SelectionButton";
+
+import api from "../../config/api";
 import { GridView, Section, SelectGridView, } from "./style";
 import { useEffect, useState, ChangeEvent } from "react";
 import { Button } from "../../components/Card/ButtonCard";
 import { CardAdicionar } from "../../components/Card/CardAdicionar/CardAdicionar ";
-import { BarraPesquisa } from "../../components/BarraDePesquisa/BarraPesquisa";
+
 import { CardLocal } from "../../components/Card/ButtonCard/CardLocal/CardLocal";
-import api from "../../config/api";
 import { VisualCaixa } from "../../components/Card/ButtonCard/CardLocal/VisualCaixa/VisualCaixa";
+
+import { PesquisaStyle } from "../../components/BarraDePesquisa/Pesquisa";
 
 
 
@@ -15,17 +16,17 @@ import { VisualCaixa } from "../../components/Card/ButtonCard/CardLocal/VisualCa
 
 export default function Home() {
   const [showCard, setShowCard] = useState(false);
-  
-  const[caixa, setCaixa]=useState(null);
+
+  const [caixa, setCaixa] = useState(null);
 
   const [caixas, setCaixas] = useState([]);
 
-  const[search,setSearch]= useState('')
+  const [search, setSearch] = useState('')
 
   async function loadCaixas() {
     try {
-      const { data: {result} } = await api.get('/caixa'); // api.delete(`/caixa/${id}`)
-      
+      const { data: { result } } = await api.get('/caixa'); // api.delete(`/caixa/${id}`)
+
       setCaixas(result)
     } catch (err) {
       if (err.response) {
@@ -45,7 +46,7 @@ export default function Home() {
   }
 
   useEffect(() => {
-    if(caixa === null) {
+    if (caixa !== null || showCard) {
       loadCaixas();
     }
   }, [caixa]);
@@ -57,27 +58,26 @@ export default function Home() {
     setCaixa(null);
   }
 
-  function handleSearch(event){
+  function handleSearch(event) {
     const query = event.target.value
 
     setSearch(query)
   }
 
-  const filterCaixas =search !== ''
-  ?caixa.filter(caixa=> caixa.content.toLocalLowerCase().includes(search.toLocaleLowerCase()))
-  :caixa
-
-
   return (
     <Section>
       <SelectGridView>
+
         <Button
           type="submit"
           onClick={() => setShowCard(true)}
         >
           adicionar +
         </Button>
-        <BarraPesquisa  type="text"  onChange={handleSearch}/>
+
+        <PesquisaStyle >
+          <input placeholder='Busque suas caixas...' onChange={(e) => setSearch(e.target.value)}></input>
+        </PesquisaStyle >
 
       </SelectGridView>
 
@@ -85,28 +85,20 @@ export default function Home() {
 
       <GridView  >
         {
-          caixas.map((caixa) => (
-            <CardLocal  onClick={() => setCaixa(caixa)}
-               
-               {...caixa} 
-               key={caixa._id} 
-             />
+          caixas.filter(caixa => caixa.dono.toLocaleLowerCase().includes(search.toLocaleLowerCase())).map((caixa) => (
+            <CardLocal    onClick={() => setCaixa(caixa)}
+
+              {...caixa}
+              key={caixa._id}
+              />
           ))
         }
 
-        
-         
-
       </GridView>
 
-
-
-        <VisualCaixa caixa={caixa} onClose={() => setCaixa(null)} />
+      <VisualCaixa caixa={caixa} onClose={() => setCaixa(null )} />
 
       <CardAdicionar showCard={showCard} onClose={() => setShowCard(false)} />
-
-
-
 
     </Section>
   );

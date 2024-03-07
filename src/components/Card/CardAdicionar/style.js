@@ -50,6 +50,10 @@ export const CardSttyle = styled.dialog`
         display: flex;
       align-items: center;
       justify-content: center;
+      margin: 5px;
+      padding: 3px;
+      font-size: 10px;
+      border-radius:5px;
         
     }
 
@@ -58,8 +62,9 @@ export const CardSttyle = styled.dialog`
     }
 
     & > form {
-        overflow: scroll;
-        background-color: #E5E3E3;
+        overflow: auto;
+        background-color: #38bdf844;
+        border: 1px solid  #818cf844;
         border-radius:4px;
         width: 280px;
         height: 565px;

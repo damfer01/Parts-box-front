@@ -1,16 +1,18 @@
+import { useState } from "react"
 import { PesquisaStyle } from "./Pesquisa"
 
 
-export function BarraPesquisa(caixa) {
-
-
+export function BarraPesquisa( ) {
+    
+    
+ 
        
     return (
         <PesquisaStyle >
-            <div >
-                <input placeholder="Pesquisa"   />
+            
+                <input placeholder="Busca de caixa"  />
               
-            </div>
+           
         </PesquisaStyle>
     )
 }

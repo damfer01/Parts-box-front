@@ -8,7 +8,7 @@ import { CardSttyle } from "./style";
 
 import { X } from 'lucide-react';
 import { registerCaixa } from '../../../service/authCaixa';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 
@@ -16,6 +16,7 @@ import { useState } from 'react';
 export function CardAdicionar({ showCard, onClose }) {
 
     const [pecas, setPecas] = useState([]);
+  
 
    
 
@@ -51,10 +52,10 @@ export function CardAdicionar({ showCard, onClose }) {
             pecas
         } = _data ;
         
-        const {success, message , result } = await registerCaixa(
+        const {success  , result } = await registerCaixa(
             dono, marca , motor , data,pecas);
 
-        alert(message);
+        
 
 
         if(success) {
@@ -63,6 +64,8 @@ export function CardAdicionar({ showCard, onClose }) {
          onClose();
         }
     };
+
+    
     
 
 
@@ -95,7 +98,7 @@ export function CardAdicionar({ showCard, onClose }) {
 
                 <button onClick={handleAddPeca}>Adicionar-Peças</button>
 
-                <button disabled={!isValid}  type='submit' className="comfirmar">confirma</button>
+                <button disabled={!isValid}     type='submit' className="comfirmar">confirma</button>
             </form>
 
         </CardSttyle>
