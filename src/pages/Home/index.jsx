@@ -9,6 +9,7 @@ import { CardLocal } from "../../components/Card/ButtonCard/CardLocal/CardLocal"
 import { VisualCaixa } from "../../components/Card/ButtonCard/CardLocal/VisualCaixa/VisualCaixa";
 
 import { PesquisaStyle } from "../../components/BarraDePesquisa/Pesquisa";
+import QRCode from "qrcode.react";
 
 
 
@@ -46,10 +47,10 @@ export default function Home() {
   }
 
   useEffect(() => {
-    if (caixa !== null || showCard) {
+    if (caixa === null ||!showCard ) {
       loadCaixas();
     }
-  }, [caixa]);
+  }, [caixa, showCard]);
 
 
   const handleDelete = (id) => {
@@ -67,17 +68,18 @@ export default function Home() {
   return (
     <Section>
       <SelectGridView>
-
+                <span>Feito por @kaua_Damfer</span>
         <Button
           type="submit"
           onClick={() => setShowCard(true)}
-        >
+          >
           adicionar +
         </Button>
 
         <PesquisaStyle >
           <input placeholder='Busque suas caixas...' onChange={(e) => setSearch(e.target.value)}></input>
         </PesquisaStyle >
+        
 
       </SelectGridView>
 
@@ -87,12 +89,12 @@ export default function Home() {
         {
           caixas.filter(caixa => caixa.dono.toLocaleLowerCase().includes(search.toLocaleLowerCase())).map((caixa) => (
             <CardLocal    onClick={() => setCaixa(caixa)}
-
-              {...caixa}
-              key={caixa._id}
+            
+            {...caixa}
+            key={caixa._id}
               />
-          ))
-        }
+              ))
+            }
 
       </GridView>
 
@@ -100,7 +102,10 @@ export default function Home() {
 
       <CardAdicionar showCard={showCard} onClose={() => setShowCard(false)} />
 
+        
+
+
     </Section>
   );
-
+  
 }

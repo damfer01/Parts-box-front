@@ -1,8 +1,9 @@
 import api from "../../../../../config/api";
-import { useEffect, useState, } from "react";
+
 import { LocalSttyle } from "../../../../../components/Card/ButtonCard/CardLocal/VisualCaixa/style";
 
 import { X } from 'lucide-react';
+
 
 
 
@@ -61,7 +62,7 @@ export function VisualCaixa({caixa, onClose}) {
                 <button className="excluir" onClick={deleteCaixas}>Excluir</button>
                
             
-
+                
         </LocalSttyle>
     ) : <></>
 }
