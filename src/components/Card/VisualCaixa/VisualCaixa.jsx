@@ -1,6 +1,7 @@
-import api from "../../../../../config/api";
+import api from "../../../config/api";
+import { format } from "date-fns"
 
-import { LocalSttyle } from "../../../../../components/Card/ButtonCard/CardLocal/VisualCaixa/style";
+import { VisualSttyle } from "./VisualStyle"; 
 
 import { X } from 'lucide-react';
 
@@ -35,7 +36,7 @@ export function VisualCaixa({caixa, onClose}) {
 
    
     return caixa !== null ? (
-        <LocalSttyle open >
+        <VisualSttyle open >
 
             
 
@@ -43,7 +44,7 @@ export function VisualCaixa({caixa, onClose}) {
                    <div> 
                 <span>{caixa.dono}</span>
                 <span>{caixa.motor}</span>
-                <span>{caixa.data}</span>
+                <span>{format(caixa.data,"dd/MM/yyyy - HH:mm")}</span>
                  </div>
                     <span className="pecas">peças</span>
                 {
@@ -63,6 +64,6 @@ export function VisualCaixa({caixa, onClose}) {
                
             
                 
-        </LocalSttyle>
+        </VisualSttyle>
     ) : <></>
 }

@@ -11,7 +11,7 @@ export const Button =  styled.button`
     border-radius: 10px;
     font-size: 24px;
     font-weight :600;
-    color: ${({theme}) => theme.colors.white};
+    color: ${({theme}) => theme.colors.black};
     transition: all .2s;
 
     &:disabled{

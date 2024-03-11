@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const LocalSttyle = styled.dialog`
+export const VisualSttyle = styled.dialog`
     position: absolute;
     display: grid ;
     flex-direction: column;

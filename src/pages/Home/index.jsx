@@ -1,28 +1,27 @@
-
 import api from "../../config/api";
 import { GridView, Section, SelectGridView, } from "./style";
-import { useEffect, useState, ChangeEvent } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "../../components/Card/ButtonCard";
 import { CardAdicionar } from "../../components/Card/CardAdicionar/CardAdicionar ";
 
-import { CardLocal } from "../../components/Card/ButtonCard/CardLocal/CardLocal";
-import { VisualCaixa } from "../../components/Card/ButtonCard/CardLocal/VisualCaixa/VisualCaixa";
+import { CardLocal } from "../../components/Card/CardLocal/CardLocal";
+import { VisualCaixa } from "../../components/Card/VisualCaixa/VisualCaixa"; 
 
 import { PesquisaStyle } from "../../components/BarraDePesquisa/Pesquisa";
-import QRCode from "qrcode.react";
+
 
 
 
 
 
 export default function Home() {
-  const [showCard, setShowCard] = useState(false);
+  const [ showCard, setShowCard ] = useState(false);
 
-  const [caixa, setCaixa] = useState(null);
+  const [ caixa, setCaixa ] = useState(null);
 
-  const [caixas, setCaixas] = useState([]);
+  const [ caixas, setCaixas ] = useState([]);
 
-  const [search, setSearch] = useState('')
+  const [ search, setSearch ] = useState('')
 
   async function loadCaixas() {
     try {

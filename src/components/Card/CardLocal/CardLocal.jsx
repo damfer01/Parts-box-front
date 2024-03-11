@@ -1,5 +1,4 @@
-import QRCode from "qrcode.react"
-import { LocalStyle } from "./VisualCaixa/LocalStyle"
+import { LocalStyle } from "../VisualCaixa/LocalStyle" 
 import { format } from "date-fns"
 
 export function CardLocal({onClick,_id,dono, motor, data,pecas}) {
