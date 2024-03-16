@@ -36,8 +36,8 @@ export default function Login() {
         resolver: yupResolver(loginSchema),
        mode: 'onChange', 
        defaultValues:{
-        empresa : "damfer",
-        password : "12345678",
+        empresa : "",
+        password : "",
        }
     });
 
