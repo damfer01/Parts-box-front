@@ -43,6 +43,7 @@ export function VisualCaixa({caixa, onClose}) {
                 <button onClick={onClose}><X /></button>
                    <div> 
                 <span>{caixa.dono}</span>
+                <span>{caixa.marca}</span>
                 <span>{caixa.motor}</span>
                 <span>{format(caixa.data,"dd/MM/yyyy - HH:mm")}</span>
                  </div>
