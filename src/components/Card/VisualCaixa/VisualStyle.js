@@ -24,7 +24,7 @@ export const VisualSttyle = styled.dialog`
         display: flex;
         padding: 16px;
          font-size: 16px;
-        border-radius:20px;
+        border-radius:10px;
         border: 1px solid #000;
         border-color: rgb(147 197 253);
          margin: 2px;
@@ -42,7 +42,7 @@ export const VisualSttyle = styled.dialog`
         display: flex;
         padding: 16px;
          font-size: 16px;
-        border-radius:20px;
+        border-radius:10px;
         border: 1px solid #000;
         border-color: rgb(147 197 253);
          margin: 2px;
