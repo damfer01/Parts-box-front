@@ -7,6 +7,7 @@ import { X } from 'lucide-react';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useStore } from '../../../store';
 
 
 
@@ -15,6 +16,10 @@ import { useForm } from 'react-hook-form';
 
 
 export function CardAdicionar({ showCard, onClose }) {
+
+    const {
+        user,
+    } = useStore();
 
     const [pecas, setPecas] = useState([]);
 
@@ -50,7 +55,7 @@ export function CardAdicionar({ showCard, onClose }) {
             pecas
         } = _data;
 
-        const { success, result } = await registerCaixa(
+        const { success, result } = await registerCaixa(user.token,
             dono, marca, motor, data, pecas);
 
         if (success) {

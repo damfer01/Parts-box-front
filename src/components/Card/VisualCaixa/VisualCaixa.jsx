@@ -4,16 +4,24 @@ import { format } from "date-fns"
 import { VisualSttyle } from "./VisualStyle"; 
 
 import { X } from 'lucide-react';
+import { useStore } from "../../../store";
 
 
 
 
 
 export function VisualCaixa({caixa, onClose}) { 
+  const {
+    user,
+  } = useStore();
     
          async function deleteCaixas() {
              try {
-               await api.delete(`/caixa/${caixa._id}`);
+               await api.delete(`/caixa/${caixa._id}`, {
+                headers: {
+                  Authorization: `Bearer ${user.token}`,
+                }
+               });
                
 
                onClose();

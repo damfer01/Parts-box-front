@@ -1,6 +1,6 @@
 import api  from "../config/api";
 
-export async function criarCaixa (dono, marca, motor, _data,pecas){
+export async function criarCaixa (token, dono, marca, motor, _data,pecas){
     try{
         const{data} = await api.post('/caixa',{
             dono,
@@ -8,6 +8,10 @@ export async function criarCaixa (dono, marca, motor, _data,pecas){
             motor,
             data: _data,
             pecas
+        }, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            }
         });
         return data;
     } catch (err){
@@ -27,7 +31,7 @@ export async function criarCaixa (dono, marca, motor, _data,pecas){
     }
 }
 
-export async function registerCaixa(dono, marca, motor, _data,pecas){
+export async function registerCaixa(token, dono, marca, motor, _data,pecas){
     try {
         const {data} = await api.post('/caixa' , {
             dono,
@@ -36,6 +40,10 @@ export async function registerCaixa(dono, marca, motor, _data,pecas){
             data: _data,
             pecas,
 
+        }, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            }
         });
         return data;
     }catch (err){

@@ -8,6 +8,7 @@ export function useUser() {
     const setUserData = (user) => {
         setName(user.name);
         setToken(user.token);
+        console.log(user)
     };
 
     return useMemo(() => ({

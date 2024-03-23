@@ -8,6 +8,7 @@ import { CardLocal } from "../../components/Card/CardLocal/CardLocal";
 import { VisualCaixa } from "../../components/Card/VisualCaixa/VisualCaixa"; 
 
 import { PesquisaStyle } from "../../components/BarraDePesquisa/Pesquisa";
+import { useStore } from "../../store";
 
 
 
@@ -15,6 +16,9 @@ import { PesquisaStyle } from "../../components/BarraDePesquisa/Pesquisa";
 
 
 export default function Home() {
+  const {
+    user,
+  } = useStore();
   const [ showCard, setShowCard ] = useState(false);
 
   const [ caixa, setCaixa ] = useState(null);
@@ -25,7 +29,11 @@ export default function Home() {
 
   async function loadCaixas() {
     try {
-      const { data: { result } } = await api.get('/caixa'); // api.delete(`/caixa/${id}`)
+      const { data: { result } } = await api.get('/caixa', {
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+        }
+      }); // api.delete(`/caixa/${id}`)
 
       setCaixas(result)
     } catch (err) {
@@ -78,7 +86,7 @@ export default function Home() {
         <PesquisaStyle >
           <input placeholder='Busque suas caixas...' onChange={(e) => setSearch(e.target.value)}></input>
         </PesquisaStyle >
-        
+       
 
       </SelectGridView>
 

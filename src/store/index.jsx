@@ -4,7 +4,6 @@ import { useUser } from "./hooks/user";
 
 export const store = createContext({ 
     user: '',
-    token: '',
     setUserData: (user) => {}
 });
 const {Provider} = store

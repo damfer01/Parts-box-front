@@ -52,7 +52,10 @@ export default function Login() {
         alert(message);
 
         if(success){
-            user.setUserData(result);
+            user.setUserData({
+                name: result.empresa,
+                token: result.token,
+            });
 
             navigate('/caixa');
         } 
