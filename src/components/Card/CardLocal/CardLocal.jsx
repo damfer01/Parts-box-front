@@ -10,7 +10,7 @@ export function CardLocal({onClick,_id,dono, motor, data,pecas}) {
     
             <span>{dono}</span>
             <span>{motor}</span>
-            <span>{format(data,"dd/MM/yyyy - HH:mm")}</span>
+            <span>{format(data,"dd/MM/yyyy - HH:mm:ss")}</span>
             
             
            

@@ -24,10 +24,11 @@ export const VisualSttyle = styled.dialog`
         display: flex;
         padding: 16px;
          font-size: 16px;
+         
         border-radius:10px;
         border: 1px solid #000;
         border-color: rgb(147 197 253);
-         margin: 2px;
+         margin: 5px;
         align-items: center;
         justify-content: center ;
         width:  240px;
@@ -47,6 +48,7 @@ export const VisualSttyle = styled.dialog`
         border-color: rgb(147 197 253);
          margin: 2px;
         align-items: center;
+        border-color: #000;
         justify-content: center ;
         width:  240px;
         height: 34PX;
@@ -78,6 +80,7 @@ export const VisualSttyle = styled.dialog`
          left: 100px;
          padding: 3px;
          font-size: 16px;
+         border: 1px solid #000;
          border: none;
         
      }

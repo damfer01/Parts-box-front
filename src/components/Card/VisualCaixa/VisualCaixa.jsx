@@ -53,7 +53,7 @@ export function VisualCaixa({caixa, onClose}) {
                 <span>{caixa.dono}</span>
                 <span>{caixa.marca}</span>
                 <span>{caixa.motor}</span>
-                <span>{format(caixa.data,"dd/MM/yyyy - HH:mm")}</span>
+                <span>{format(caixa.data,"dd/MM/yyyy - hh:mm:ss")}</span>
                  </div>
                     <span className="pecas">peças</span>
                 {
