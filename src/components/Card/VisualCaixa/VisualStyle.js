@@ -14,6 +14,7 @@ export const VisualSttyle = styled.dialog`
     width: 100%;
     height: 100%;
     border: none;
+    color: #FFF;
     font-size: 24px;
     font-weight: 600;
     transition: all .2s;
@@ -63,6 +64,7 @@ export const VisualSttyle = styled.dialog`
         display: grid;
         align-items: center;
       justify-content: center;
+      color: #FFF;
        background:#AD130C;
        border-color: rgb(147 197 253);
        border: 1px solid #000;
@@ -79,6 +81,7 @@ export const VisualSttyle = styled.dialog`
          top: 10px;
          left: 100px;
          padding: 3px;
+         color: #FFF;
          font-size: 16px;
          border: 1px solid #000;
          border: none;

@@ -1,4 +1,3 @@
-
 import CaixaSchema from '../../../schema/Caixa/CaixaSchema';
 import { registerCaixa } from '../../../service/authCaixa';
 import { CardSttyle } from "./style";
@@ -10,11 +9,6 @@ import { useForm } from 'react-hook-form';
 import { useStore } from '../../../store';
 
 
-
-
-
-
-
 export function CardAdicionar({ showCard, onClose }) {
 
     const {
@@ -24,12 +18,9 @@ export function CardAdicionar({ showCard, onClose }) {
     const [pecas, setPecas] = useState([]);
 
 
-    
-
     const handleAddPeca = () => {
         setPecas((value) => [...value, value.length])
     };
-
 
 
     const {
@@ -66,12 +57,11 @@ export function CardAdicionar({ showCard, onClose }) {
 
     useEffect(() => {
         if (!showCard) {
-           
+
             setPecas([])
             reset();
         }
     }, [showCard]);
-
 
 
     return showCard ? (

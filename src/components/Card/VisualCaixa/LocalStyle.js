@@ -8,6 +8,7 @@ export const LocalStyle = styled.button`
     padding: 16px;
     border: none;
     border-radius: 10px;
+    margin: 5px;
     color: #FFF;
     font-size: 16px;
     font-weight :600;
@@ -24,7 +25,9 @@ export const LocalStyle = styled.button`
         scale: .95;
     }
    
-  
+  span{
+    margin:3px;
+  }
     
 
   

@@ -24,6 +24,7 @@ export const CardSttyle = styled.dialog`
          font-size: 16px;
         border-radius:20px;
         border: 1px solid #000;
+        color: #fff;
          margin: 2px;
         align-items: center;
         justify-content: center ;
@@ -48,6 +49,7 @@ export const CardSttyle = styled.dialog`
      form > button {
         background:#AD130C;
         display: flex;
+        color: #fff;
       align-items: center;
       justify-content: center;
       margin: 5px;

@@ -5,6 +5,7 @@ export const Button =  styled.button`
     display:  flex;
     align-items: center;
     justify-content: center ;
+    color: #FFF;
     width: 180px;
     height: 65px;
     background-color : ${({theme, $color})=> theme.colors[$color]} ;
@@ -12,10 +13,10 @@ export const Button =  styled.button`
     border-radius: 10px;
     font-size: 24px;
     font-weight :600;
-    color: ${({theme}) => theme.colors.white};
     transition: all .2s;
 
     &:disabled{
+        
         opacity:.5;
     }
 

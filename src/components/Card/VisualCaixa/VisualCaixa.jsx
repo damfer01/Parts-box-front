@@ -7,9 +7,6 @@ import { X } from 'lucide-react';
 import { useStore } from "../../../store";
 
 
-
-
-
 export function VisualCaixa({caixa, onClose}) { 
   const {
     user,
@@ -42,18 +39,15 @@ export function VisualCaixa({caixa, onClose}) {
            }
           }
 
-   
     return caixa !== null ? (
         <VisualSttyle open >
-
-            
 
                 <button onClick={onClose}><X /></button>
                    <div> 
                 <span>{caixa.dono}</span>
                 <span>{caixa.marca}</span>
                 <span>{caixa.motor}</span>
-                <span>{format(caixa.data,"dd/MM/yyyy - hh:mm:ss")}</span>
+                <span>{format(caixa.data,"dd/MM/yyyy")}</span>
                  </div>
                     <span className="pecas">peças</span>
                 {
@@ -66,13 +60,8 @@ export function VisualCaixa({caixa, onClose}) {
                     ))
                 }
 
-
-              
-
                 <button className="excluir" onClick={deleteCaixas}>Excluir</button>
-               
-            
-                
+                     
         </VisualSttyle>
     ) : <></>
 }
