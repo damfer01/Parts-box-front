@@ -75,7 +75,7 @@ export default function Home() {
       <SelectGridView>
         <Patrocinio onClick={
           () =>
-        <a  href="http://wa.me/556296642013" target="_blank" >  </a>
+        <a  href="https://wa.me/5562996642013" target="_blank" >  </a>
         }>
         </Patrocinio>
         <span>Feito por @kaua_Damfer</span>

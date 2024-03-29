@@ -10,7 +10,7 @@ padding: 25px 16px 0px 16px;
 `;
 
 export const Actions = styled.div`
-    flex: 1;
+    /* flex: 1; */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

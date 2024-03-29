@@ -77,12 +77,12 @@ export function CardAdicionar({ showCard, onClose }) {
 
                 {
                     pecas.map((peca, index) => (
-                        <>
+                        <div key={index}>
                             <div></div>
                             <input className='foco' type="text" placeholder="peça: " {...register(`pecas[${peca}].nome`)} />
                             <input type="text" placeholder="Codigo:" {...register(`pecas[${peca}].codigo`)} />
                             <input type="text" placeholder="Medida:" {...register(`pecas[${peca}].medida`)} />
-                        </>
+                        </div>
                     ))
                 }
 
