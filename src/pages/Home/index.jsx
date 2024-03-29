@@ -73,12 +73,9 @@ export default function Home() {
   return (
     <Section>
       <SelectGridView>
-        <Patrocinio onClick={
-          () =>
-        <a  href="https://wa.me/5562996642013" target="_blank" >  </a>
-        }>
-        </Patrocinio>
-        <span>Feito por @kaua_Damfer</span>
+        
+        <Patrocinio/>
+
         <Button
           type="submit"
           onClick={() => setShowCard(true)}
