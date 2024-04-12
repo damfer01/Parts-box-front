@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const LocalStyle = styled.button`
 
-     background-color: #5389A0;
+     background-color: #334155;
     display:  flex;
     flex-direction: column;
     padding: 16px;

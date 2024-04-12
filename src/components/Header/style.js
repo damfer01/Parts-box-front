@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderView = styled.header`
-    background:#5389A0;
+    background:#334155;
     display: flex;
     flex-direction: row;
     align-items: center;

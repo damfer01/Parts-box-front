@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Style = styled.button`
-    color: #5389A0;
+    color: #334155;
     background-color: transparent;
     display: flex;
     align-self: flex-end;
@@ -25,7 +25,7 @@ export const Style = styled.button`
 
     a{
 
-        color: #5389A0;
+        color: #334155;
         background-color: transparent;
     display: flex;
 align-self: flex-end;

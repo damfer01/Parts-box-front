@@ -5,8 +5,6 @@ export const Section = styled.section`
     flex-direction: column;
     flex: 1;
     overflow: hidden;
-    
-
 `;
 
 
@@ -14,7 +12,6 @@ export const SelectGridView = styled.div`
     display: flex;
     flex-direction: column;
     padding: 16px;
-
 `;
 
 export const GridView = styled.div `
@@ -27,6 +24,4 @@ export const GridView = styled.div `
     padding-top: 16px;
     overflow: auto ; 
 
-
-    
 `;

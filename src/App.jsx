@@ -12,8 +12,6 @@ import { AppLayout } from './components/layouts/appLayouts';
 import { StateProvider, useStore } from './store';
 
 
-
-
 function App() {
   return(
   <ThemeProvider theme={theme} >
@@ -24,7 +22,6 @@ function App() {
   );
 
 }
-
 
 
  function Layout(){
@@ -47,9 +44,6 @@ function App() {
 </AuthLayout>
   );
 
-
 }
-
-
 
 export default App;

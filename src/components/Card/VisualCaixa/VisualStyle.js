@@ -39,7 +39,7 @@ export const VisualSttyle = styled.dialog`
         }
     }
 
-    .pecas{
+     .pecas{
         background-color: rgb(96 165 250);
         display: flex;
         padding: 16px;
@@ -56,7 +56,7 @@ export const VisualSttyle = styled.dialog`
 
     }
 
-    div > .foco{
+     div > .foco{
         background-color:#5389A0;
     }
 
@@ -74,7 +74,7 @@ export const VisualSttyle = styled.dialog`
     }
     
 
-    .excluir{
+     .excluir{
          background-color:#AD130C;
          display: grid;
          border-radius: 10px;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Button =  styled.button`
-    background: #5389A0;
+    background: #334155;
     display:  flex;
     align-items: center;
     justify-content: center ;

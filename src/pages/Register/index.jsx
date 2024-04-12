@@ -102,11 +102,11 @@ export default function Register() {
                 </Spacing>
                 <Actions>
                     <Spacing $bottom={24}>
-                        <Button disabled={!isValid} $color="secondary" type='subnit'>SAVE</Button>
+                        <Button disabled={!isValid} $color="secondary" type='subnit'>SALVAR</Button>
                     </Spacing>
 
                     <Spacing>
-                        <Button  onClick={() => navigate(-1)} type='button' $color="primaryDark">BACK</Button>
+                        <Button  onClick={() => navigate(-1)} type='button' $color="primaryDark">VOLTAR</Button>
                     </Spacing>
                 </Actions>
                 

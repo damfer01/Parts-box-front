@@ -12,6 +12,4 @@ width: 100%;
  margin-Right:${ $right }px;
  margin-bottom: ${ $bottom }px;
  margin-left: ${ $left}px;
- `}
-
-`;
+ `}`;

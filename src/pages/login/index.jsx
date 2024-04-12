@@ -87,11 +87,11 @@ export default function Login() {
                 </Spacing>
                 <Actions>
                     <Spacing $bottom={24}>
-                        <Button disabled={!isValid} $color="secondary" type='subnit'>SING IN</Button>
+                        <Button disabled={!isValid} $color="secondary" type='subnit'>ENTRAR</Button>
                     </Spacing>
 
                     <Spacing>
-                        <Button  onClick={() => navigate('/register')} type='button' $color="primaryDark">SING UP</Button>
+                        <Button  onClick={() => navigate('/register')} type='button' $color="primaryDark">CADASTRA</Button>
                     </Spacing>
                 </Actions>
                 

@@ -13,7 +13,4 @@ export const SelectionButton = styled.button`
     $selected
     ? theme.colors.primary
     : theme.colors.defaultLight
-};
-    
-
-`;
+}`;

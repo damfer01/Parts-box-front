@@ -8,7 +8,6 @@ import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useStore } from '../../../store';
 
-
 export function CardAdicionar({ showCard, onClose }) {
 
     const {
@@ -22,7 +21,6 @@ export function CardAdicionar({ showCard, onClose }) {
         setPecas((value) => [...value, value.length])
     };
 
-
     const {
         handleSubmit,
         reset,
@@ -30,7 +28,6 @@ export function CardAdicionar({ showCard, onClose }) {
         formState: {
             isValid,
         }
-
 
     } = useForm({
         resolver: yupResolver(CaixaSchema),
@@ -62,7 +59,6 @@ export function CardAdicionar({ showCard, onClose }) {
             reset();
         }
     }, [showCard]);
-
 
     return showCard ? (
         <CardSttyle open  >

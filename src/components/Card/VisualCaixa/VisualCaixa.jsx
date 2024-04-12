@@ -41,7 +41,7 @@ export function VisualCaixa({caixa, onClose}) {
 
     return caixa !== null ? (
         <VisualSttyle open >
-
+                
                 <button onClick={onClose}><X /></button>
                    <div> 
                 <span>{caixa.dono}</span>
@@ -61,7 +61,7 @@ export function VisualCaixa({caixa, onClose}) {
                 }
 
                 <button className="excluir" onClick={deleteCaixas}>Excluir</button>
-                     
+                   
         </VisualSttyle>
     ) : <></>
 }

@@ -1,4 +1,4 @@
-import { LocalStyle } from "../VisualCaixa/LocalStyle"
+import { LocalStyle } from "./LocalStyle"
 import { format } from "date-fns"
 
 export function CardLocal({ onClick, dono, motor, data }) {
