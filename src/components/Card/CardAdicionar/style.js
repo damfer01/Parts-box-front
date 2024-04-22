@@ -18,21 +18,34 @@ export const CardSttyle = styled.dialog`
     background-color: #00000044;
 
     input{
-        background-color: #c5c5c5;
-        display: flex;
-        padding: 16px;
-         font-size: 16px;
-        border-radius:20px;
-        border: 1px solid #000;
-        color: #fff;
-         margin: 2px;
+        /* display: flex; */
         align-items: center;
         justify-content: center ;
+        padding: 16px;
+         margin: 3px; 
+        margin-left:18px;
         width:  240px;
         height: 34PX;
+        font-size: 16px;
+        border-radius:20px;
+        background-color: #c5c5c5;
+        border: 1px solid #000;
+        color: #fff;
         &::placeholder {
             color: #444;
         }
+    }
+
+    #excluir{
+        background:#AD130C;
+        display: flex;
+        color: #fff;
+      align-items: center;
+      justify-content: center;
+      margin: 5px; 
+      padding: 3px;
+      font-size: 10px;
+      border-radius:5px;
     }
 
     
@@ -52,12 +65,15 @@ export const CardSttyle = styled.dialog`
         color: #fff;
       align-items: center;
       justify-content: center;
-      margin: 5px;
+      margin: 5px; 
+      margin-left:18px;
       padding: 3px;
       font-size: 10px;
       border-radius:5px;
         
     }
+    
+    
 
     form > .foco{
         background-color:#5389A0;
@@ -65,8 +81,8 @@ export const CardSttyle = styled.dialog`
 
     & > form {
         overflow: auto;
-        background-color: #38bdf844;
-        border: 1px solid  #818cf844;
+        background-color: #33415544;
+        border: 1px solid  #818cf8;
         border-radius:4px;
         width: 280px;
         height: 565px;

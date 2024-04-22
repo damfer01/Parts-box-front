@@ -10,6 +10,7 @@ import { VisualCaixa } from "../../components/Card/VisualCaixa/VisualCaixa";
 import { PesquisaStyle } from "../../components/BarraDePesquisa/Pesquisa";
 import { useStore } from "../../store";
 import Patrocinio from "../../components/ButtonPatrocinio/Patrocinio";
+import { Type } from "../../components/Type";
 
 
 
@@ -82,7 +83,6 @@ export default function Home() {
         >
           adicionar +
         </Button>
-      
 
         <PesquisaStyle >
           <input placeholder='Busque suas caixas...' onChange={(e) => setSearch(e.target.value)}></input>
@@ -91,11 +91,18 @@ export default function Home() {
 
       </SelectGridView>
 
-      <span>Cadastrados :</span>
+      <span  id="cadastro">Cadastrados :</span>
 
       <GridView  >
         {
-          caixas.filter(caixa => caixa.dono.toLocaleLowerCase().includes(search.toLocaleLowerCase())).map((caixa) => (
+          caixas.filter(caixa =>
+             caixa.dono.toLocaleLowerCase().includes(search.toLocaleLowerCase()) ||
+             caixa.marca.toLocaleLowerCase().includes(search.toLocaleLowerCase()) ||
+             caixa.pecas.some((cod) => cod.nome.includes(search))||
+             caixa.pecas.some((cod) => cod.codigo.includes(search)) ||
+             caixa.pecas.some((cod) => cod.medida.includes(search)) 
+             
+        ).map((caixa) => (
             <CardLocal onClick={() => setCaixa(caixa)}
 
               {...caixa}
@@ -103,7 +110,7 @@ export default function Home() {
             />
           ))
         }
-
+      
       </GridView>
 
       <VisualCaixa caixa={caixa} onClose={() => setCaixa(null)} />

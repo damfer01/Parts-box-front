@@ -65,7 +65,7 @@ export function CardAdicionar({ showCard, onClose }) {
 
             <form onSubmit={handleSubmit(onSubmit)}>
 
-                <button onClick={onClose}><X /></button>
+                <button id='excluir' onClick={onClose}><X /></button>
 
                 <input type="text" placeholder="Dono:  Obrigatorio" {...register('dono')} />
                 <input type="text" placeholder="Marca:  Obrigatorio" {...register('marca')} />
